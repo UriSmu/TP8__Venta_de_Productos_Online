@@ -46,31 +46,31 @@ const Productos = () => {
   }, [categoriaSeleccionada]);
 
   function sortProductos(arr) {
-    let sorted = [...arr];
-    switch (sort) {
-      case 'title':
-        sorted.sort((a, b) => a.title.localeCompare(b.title));
-        break;
-      case 'title-desc':
-        sorted.sort((a, b) => b.title.localeCompare(a.title));
-        break;
-      case 'price':
-        sorted.sort((a, b) => a.price - b.price);
-        break;
-      case 'price-desc':
-        sorted.sort((a, b) => b.price - a.price);
-        break;
-      case 'rate':
-        sorted.sort((a, b) => (b.rating?.rate || 0) - (a.rating?.rate || 0));
-        break;
-      case 'rate-asc':
-        sorted.sort((a, b) => (a.rating?.rate || 0) - (b.rating?.rate || 0));
-        break;
-      default:
-        break;
-    }
-    return sorted;
+  let sorted = [...arr];
+  switch (sort) {
+    case 'title':
+      sorted.sort((a, b) => a.title.localeCompare(b.title));
+      break;
+    case 'title-desc':
+      sorted.sort((a, b) => b.title.localeCompare(a.title));
+      break;
+    case 'price':
+      sorted.sort((a, b) => a.price - b.price);
+      break;
+    case 'price-desc':
+      sorted.sort((a, b) => b.price - a.price);
+      break;
+    case 'rate':
+      sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+      break;
+    case 'rate-asc':
+      sorted.sort((a, b) => (a.rating || 0) - (b.rating || 0));
+      break;
+    default:
+      break;
   }
+  return sorted;
+}
 
   const filtered = sortProductos(
     productos.filter(p =>
