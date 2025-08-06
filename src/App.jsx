@@ -10,7 +10,6 @@ import Carrito from './pages/Carrito';
 
 
 const App = () => (
-  <BrowserRouter>
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
@@ -22,7 +21,6 @@ const App = () => (
         <Route path="carrito" element={<Carrito />} />
       </Route>
     </Routes>
-  </BrowserRouter>
 );
 
 export default App;
