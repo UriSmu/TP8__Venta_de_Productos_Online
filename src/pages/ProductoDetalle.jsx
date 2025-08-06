@@ -117,7 +117,7 @@ const ProductoDetalle = () => {
           {producto.shippingInformation && <div style={{marginBottom:'0.7rem'}}><b>Envío:</b> {producto.shippingInformation}</div>}
           {producto.availabilityStatus && <div style={{marginBottom:'0.7rem'}}><b>Disponibilidad:</b> {producto.availabilityStatus}</div>}
           {producto.returnPolicy && <div style={{marginBottom:'0.7rem'}}><b>Devolución:</b> {producto.returnPolicy}</div>}
-          {producto.minimumOrderQuantity && <div style={{marginBottom:'0.7rem'}}><b>Mínimo de compra:</b> {producto.minimumOrderQuantity}</div>}
+          {producto.minimumOrderQuantity && <div style={{marginBottom:'0.7rem'}}><b>Mínimo de compra para descuentos:</b> {producto.minimumOrderQuantity}</div>}
           <div style={{margin:'1.2rem 0'}}>
             <label>
               <b>Cantidad:</b>
